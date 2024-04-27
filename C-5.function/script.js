@@ -52,20 +52,55 @@
 
 
 
-let n =prompt("enter any number");
-let arr=[];
-for(let i=1;i<=n;i++){
-   arr[i-1]=i;
+// let n =prompt("enter any number");
+// let arr=[];
+// for(let i=1;i<=n;i++){
+//    arr[i-1]=i;
+// }
+// console.log(arr)
+
+// let sum = arr.reduce((prev,curr)=>{
+//     return prev+curr;
+// });
+// console.log("sum = ",sum);
+
+// let product = arr.reduce((prev,curr)=>{
+//     return prev*curr;
+// });
+// console.log("factorial = ",product);
+
+
+//function inside function
+
+// function app(){
+//     console.log("inside app");
+//     const myFunc=()=>{
+//         console.log("hello from myfunc")
+//     }
+//     const sum = (num1,num2)=>{
+//         console.log(`sum of ${num1} and ${num2} :${num1+num2}`)
+//     }
+//     const mul = (num1,num2)=>num1*num2;
+
+//     sum(12,5);
+//     console.log("mul of two number is :",mul(5,5))
+// }
+
+// app();
+
+
+// callback function
+
+function myFunc2(name){
+    console.log("inside my func 2 ");
+    console.log(`your  name is : ${name}`);
 }
-console.log(arr)
 
-let sum = arr.reduce((prev,curr)=>{
-    return prev+curr;
-});
-console.log("sum = ",sum);
+function myfunc (callback){
+    console.log("hello there ");
+    callback("kuljeet");
 
-let product = arr.reduce((prev,curr)=>{
-    return prev*curr;
-});
-console.log("factorial = ",product);
+}
+
+myfunc(myFunc2);
 
